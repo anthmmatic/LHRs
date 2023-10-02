@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  job-name:
+    runs-on:
+      group: ubuntu-4core-group
+    strategy:
+      matrix:
+        numb: [0,1,2,3]
+    steps:
+      - run: |
+          echo "Sleeping ..."
+          sleep 1m
+          echo "Finished!"
